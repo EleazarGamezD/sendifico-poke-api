@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Debug Nest Framework",
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": [
+        "run",
+        "start:debug"
+      ],
+      "port": 9229,
+      "autoAttachChildProcesses": true,
+      "restart": true,
+      "sourceMaps": true,
+      "stopOnEntry": false,
+      "console": "integratedTerminal",
+    }
+  ]
+}
