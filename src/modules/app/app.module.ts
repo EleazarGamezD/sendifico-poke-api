@@ -31,9 +31,7 @@ import { LoggerModule } from 'nestjs-pino';
           };
         } else {
           return {
-            pinoHttp: {
-              level: 'info',
-            },
+            pinoHttp: {},
           };
         }
       },

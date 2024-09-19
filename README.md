@@ -5,80 +5,147 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+# Sendifico Poke API
 
-## Description
+Sendifico Poke API es una aplicación basada en NestJS para manejar datos de la API de Pokémon.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Realizado por Eleazar Gámez
 
-## Project setup
+## Requisitos Previos
 
-```bash
-$ yarn install
-```
+- [Node.js](https://nodejs.org/) (versión 18.x.x o superior)
+  
+Asegúrate de tener instalados los siguientes programas:
 
-## Compile and run the project
+- [Node.js](https://nodejs.org/) (versión 16 o superior)
+- [Yarn](https://classic.yarnpkg.com/en/docs/install) (opcional, si prefieres usar Yarn en lugar de NPM)
 
-```bash
-# development
-$ yarn run start
 
-# watch mode
-$ yarn run start:dev
+## Instalación
 
-# production mode
-$ yarn run start:prod
-```
+1. Clona este repositorio:
 
-## Run tests
+   ```bash
+   git clone https://github.com/tu-repositorio/sendifico-poke-api.git
 
-```bash
-# unit tests
-$ yarn run test
+2. Accede a la carpeta del proyecto:
 
-# e2e tests
-$ yarn run test:e2e
+    ```bash
+    cd sendifico-poke-api
+    ```
 
-# test coverage
-$ yarn run test:cov
-```
+### Usando NPM
 
-## Resources
+1. Clona el repositorio:
+    ```bash
+    git clone <URL-del-repositorio>
 
-Check out a few resources that may come in handy when working with NestJS:
+2. Accede a la carpeta del proyecto:
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+    ```bash
+    cd sendifico-poke-api
 
-## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+3. Instala las dependencias usando NPM o YARN:
 
-## Stay in touch
+    ```bash
+   npm install o yarn install
+4. Renombrar .env.example a .env:
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+    ```bash
+   renombrar el .env.example a .env
+5. Configura las variables de Entorno:
+
+    ```bash
+   coloca las variables de entorno correspondientes   
+
+## Levantar el Proyecto en Yarn
+
+- Para iniciar el servidor en modo de desarrollo:
+
+    ```bash
+    yarn start:dev
+    ```
+
+- Para construir el proyecto:
+
+    ```bash
+    yarn build
+    ```
+
+- Para iniciar el servidor en modo de producción:
+
+    ```bash
+    yarn start:prod
+    ```
+### Usando NPM
+
+- Para iniciar el servidor en modo de desarrollo:
+
+    ```bash
+    npm run start:dev
+    ```
+
+- Para construir el proyecto:
+
+    ```bash
+    npm run build
+    ```
+
+- Para iniciar el servidor en modo de producción:
+
+    ```bash
+    npm run start:prod
+    ```
+
+## Dependencias Principales
+
+- [@nestjs/axios](https://www.npmjs.com/package/@nestjs/axios)
+- [@nestjs/class-transformer](https://www.npmjs.com/package/@nestjs/class-transformer)
+- [@nestjs/class-validator](https://www.npmjs.com/package/@nestjs/class-validator)
+- [@nestjs/common](https://www.npmjs.com/package/@nestjs/common)
+- [@nestjs/config](https://www.npmjs.com/package/@nestjs/config)
+- [@nestjs/core](https://www.npmjs.com/package/@nestjs/core)
+- [@nestjs/mapped-types](https://www.npmjs.com/package/@nestjs/mapped-types)
+- [@nestjs/platform-express](https://www.npmjs.com/package/@nestjs/platform-express)
+- [@nestjs/swagger](https://www.npmjs.com/package/@nestjs/swagger)
+- [axios](https://www.npmjs.com/package/axios)
+- [class-transformer](https://www.npmjs.com/package/class-transformer)
+- [class-validator](https://www.npmjs.com/package/class-validator)
+- [nestjs-pino](https://www.npmjs.com/package/nestjs-pino)
+- [pino](https://www.npmjs.com/package/pino)
+- [pino-http](https://www.npmjs.com/package/pino-http)
+- [pino-pretty](https://www.npmjs.com/package/pino-pretty)
+- [reflect-metadata](https://www.npmjs.com/package/reflect-metadata)
+- [rxjs](https://www.npmjs.com/package/rxjs)
+
+## Dependencias de Desarrollo
+
+- [@eslint/js](https://www.npmjs.com/package/@eslint/js)
+- [@nestjs/cli](https://www.npmjs.com/package/@nestjs/cli)
+- [@nestjs/schematics](https://www.npmjs.com/package/@nestjs/schematics)
+- [@nestjs/testing](https://www.npmjs.com/package/@nestjs/testing)
+- [@types/express](https://www.npmjs.com/package/@types/express)
+- [@types/jest](https://www.npmjs.com/package/@types/jest)
+- [@types/node](https://www.npmjs.com/package/@types/node)
+- [@types/supertest](https://www.npmjs.com/package/@types/supertest)
+- [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin)
+- [@typescript-eslint/parser](https://www.npmjs.com/package/@typescript-eslint/parser)
+- [eslint](https://www.npmjs.com/package/eslint)
+- [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier)
+- [eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier)
+- [globals](https://www.npmjs.com/package/globals)
+- [husky](https://www.npmjs.com/package/husky)
+- [jest](https://www.npmjs.com/package/jest)
+- [prettier](https://www.npmjs.com/package/prettier)
+- [source-map-support](https://www.npmjs.com/package/source-map-support)
+- [supertest](https://www.npmjs.com/package/supertest)
+- [ts-jest](https://www.npmjs.com/package/ts-jest)
+- [ts-loader](https://www.npmjs.com/package/ts-loader)
+- [ts-node](https://www.npmjs.com/package/ts-node)
+- [tsconfig-paths](https://www.npmjs.com/package/tsconfig-paths)
+- [typescript](https://www.npmjs.com/package/typescript)
+
 
 ## License
 
