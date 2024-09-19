@@ -113,14 +113,14 @@ export class PokemonService {
       )
     );
 
-    // Filtrar los nombres en español, japonés e inglés
+    // Filter types by lenguaje 
     const names = data.names.filter(n =>
       n.language.name === TranslatedTypes.ES ||
       n.language.name === TranslatedTypes.JA ||
       n.language.name === TranslatedTypes.EN
     );
 
-    // Crear el objeto con los nombres de los tipos
+    //create a object whit transalted types
     const translatedType = {
       slot: slot,
       type: {
