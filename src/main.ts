@@ -23,14 +23,6 @@ async function bootstrap(): Promise<void> {
       "https://eleazargamezd.github.io/portfolio/",
       "eleazar.gamezd@gmail.com"
     )
-    .addServer(
-      process.env.API_BASE_URL,
-      "Vercel Server"
-    )
-    .addServer(
-      "http://localhost:3000",
-      "Local Development Server"
-    )
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
