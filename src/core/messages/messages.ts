@@ -1,0 +1,1 @@
+export const ENV_NOT_SET = 'Las variables de entorno no están configuradas correctamente';

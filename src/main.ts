@@ -2,9 +2,10 @@ import { NestFactory } from '@nestjs/core';
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { AppModule } from '@modules/app/app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { Swagger } from '@core/enum/swagger';
 
 async function bootstrap(): Promise<void> {
-  
+
   const app = await NestFactory.create(AppModule, {
     cors: true,
   });
@@ -16,18 +17,29 @@ async function bootstrap(): Promise<void> {
     .setTitle('PokeDex - Sendifico')
     .setDescription('Documentación para Prueba de Backend')
     .setVersion('1.0')
-    .addTag('PokeDex')    
+    .addTag('PokeDex')
+    .setContact(
+      "Eleazar Gámez",
+      "https://eleazargamezd.github.io/portfolio/",
+      "eleazar.gamezd@gmail.com"
+    )
+    .addServer(
+      process.env.API_BASE_URL,
+      "Vercel Server"
+    )
+    .addServer(
+      "http://localhost:3000",
+      "Local Development Server"
+    )
     .build();
-
-  ;
 
   const document = SwaggerModule.createDocument(app, config);
 
   SwaggerModule.setup('/', app, document, {
-    customCssUrl: 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.10.5/swagger-ui.min.css',   //? se coloca '/' para que swagger sea la web principal ! 
+    customCssUrl: Swagger.CUSTOM_CSS_CDN,
     customJs: [
-      'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui-bundle.js',
-      'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui-standalone-preset.js',
+      Swagger.CUSTOM_JS_CDN_BUNDLE,
+      Swagger.CUSTOM_JS_CDN_PRESET,
     ],
 
     swaggerOptions: {
@@ -35,7 +47,7 @@ async function bootstrap(): Promise<void> {
     },
   });
 
-  app.setGlobalPrefix('api'); 
+  app.setGlobalPrefix('api');
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,

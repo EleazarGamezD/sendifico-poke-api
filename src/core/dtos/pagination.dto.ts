@@ -4,13 +4,13 @@ import { IsNumber, IsOptional, IsPositive, Min } from 'class-validator';
 
 export class PaginationDto {
   @ApiProperty({
-    default: 10,
+    default: 100,
     description: 'how many row do you need',
   })
   @IsOptional()
   @IsPositive()
   @Min(1)
-  @Type(() => Number) 
+  @Type(() => Number)
   limit?: number;
 
   @ApiProperty({
@@ -20,6 +20,6 @@ export class PaginationDto {
   @IsOptional()
   @IsNumber()
   @Min(0)
-  @Type(() => Number) 
+  @Type(() => Number)
   offset?: number;
 }
