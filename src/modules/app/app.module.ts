@@ -14,18 +14,29 @@ import { LoggerModule } from 'nestjs-pino';
       load: [configuration],
       isGlobal: true
     }),
-    LoggerModule.forRoot({
-      pinoHttp: {
-        transport: {
-          target: 'pino-pretty',
-          options: {
-            colorize: true,
-            translateTime: 'SYS:standard',
-            singleLine: true,
-
-          }
+    LoggerModule.forRootAsync({
+      useFactory: () => {
+        if (process.env.NODE_ENV === 'dev') {
+          return {
+            pinoHttp: {
+              transport: {
+                target: 'pino-pretty',
+                options: {
+                  colorize: true,
+                  translateTime: 'SYS:standard',
+                  singleLine: true,
+                },
+              },
+            },
+          };
+        } else {
+          return {
+            pinoHttp: {
+              level: 'info',
+            },
+          };
         }
-      }
+      },
     }),
     PokemonModule],
 })
