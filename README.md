@@ -26,19 +26,7 @@ Asegúrate de tener instalados los siguientes programas:
 1. Clona este repositorio:
 
    ```bash
-   git clone https://github.com/tu-repositorio/sendifico-poke-api.git
-
-2. Accede a la carpeta del proyecto:
-
-    ```bash
-    cd sendifico-poke-api
-    ```
-
-### Usando NPM
-
-1. Clona el repositorio:
-    ```bash
-    git clone <URL-del-repositorio>
+   git clone https://github.com/EleazarGamezD/sendifico-poke-api.git
 
 2. Accede a la carpeta del proyecto:
 
